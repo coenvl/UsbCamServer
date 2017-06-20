@@ -1,13 +1,12 @@
+#!/usr/bin/python
+
 from camera import Camera
 from handler import CameraHandler
 
 import SimpleHTTPServer
 import SocketServer
 
-PORT = 8080
-
-#cam = Camera()
-#cam.saveFrame("test.jpg")
+PORT = 8081
 
 httpd = SocketServer.TCPServer(("", PORT), CameraHandler)
 

@@ -7,8 +7,8 @@ from PIL import Image
 class Camera(object): 
 	def __init__(self): #, camid, size, fps)
 		self.cam = cv2.VideoCapture(0);
-		#self.cam.set(cv2.CAP_PROP_FRAME_WIDTH, 800);
-		#self.cam.set(cv2.CAP_PROP_FRAME_HEIGHT, 600);
+		self.cam.set(cv2.cv.CV_CAP_PROP_FRAME_WIDTH, 800);
+		self.cam.set(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT, 600);
 		#self.cam.set(cv2.CAP_PROP_FPS, 30)
 
 	def getFrame(self):
